@@ -3,6 +3,16 @@ language: node_js
 node_js:
   - "4"
 
+# https://docs.travis-ci.com/user/languages/javascript-with-nodejs#Node.js-v4-%28or-io.js-v3%29-compiler-requirements
+env:
+  - CXX=g++-4.8
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
+
 sudo: false
 
 cache:
@@ -22,3 +32,11 @@ install:
 
 script:
   - npm test
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: BMxTM4rVnvQ6D4+esyOiW5Kq8k7msyAOHQTPw3qcRBp9Avup7Ovcd4Z9XByDZGlXqhUVA1oT95IJPLy4dnzxoIMjl6c33VYqIfNMjWQN796qke7KFATQLat/orKPXx8JA6fZxxuMiQG3LLQAm+NY5GUL5imUjsX7yzg/5/cXNZYzrYw8jLbQBN5IPeMQD28zeBk79SplZOFPG5nTwhIRrBdRLg3Tln4/leS4RQgo1Ws46Zp1gXcwexNjvcPm5Djtvl1D5bJQIuP0zDvZeLHN9ilwvLuWPm+4eThQ0Sw9kwzYhtQ3+6hDc3J0HCSTmDT568curEOeMK6qCSUh/khS0hqVGBYdf1+ate3Q9Kywy32M+v+ILB30JhKVwsH5ryVPelfP3ERlvRks0KbrNyXVulhLaziStt6BUDyF7KH1N9hFSYnlrLalA9yb1XoEXgtM2vup0iYkLSWf+OqVSXYrjbu6R475GQ6uUKpNBIHtN0QOzS/bnaeuzZ4EmUe7MqHDlFuLFRJ9qwJxKrHXpz5Mmwa0ICDpBX93V26uLLo5jWrI1+AzgbATclxaYJuoYtX0AxQ5hPgIQd96j/R7RxRfOeP4/MIcoAfM5Rn5MrUl1LOTBagE8/3R7HqUuowgGcH9iJegxj1YS42gnRMhegDoxFeayDbNgi+xQ7xyH0XP1qU=
+  app: chath
+  on:
+    repo: halilim/peepchat-ui
