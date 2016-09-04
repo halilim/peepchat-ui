@@ -42,8 +42,10 @@
     "ember-load-initializers": "^0.5.1",
     "ember-material-design-icons-shim": "0.1.9",
     "ember-materialize-shim": "0.4.1",
+    "ember-network": "0.3.0",
     "ember-resolver": "^2.0.3",
     "ember-route-action-helper": "1.0.0",
+    "ember-simple-auth": "git://github.com/simplabs/ember-simple-auth.git#0aaace9b97f60e88386cd5e6dae5fc5c44755a7d",
     "loader.js": "^4.0.1"
   }
 }
