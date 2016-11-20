@@ -46,7 +46,7 @@
     "ember-network": "0.3.0",
     "ember-resolver": "^2.0.3",
     "ember-route-action-helper": "1.0.0",
-    "ember-simple-auth": "git://github.com/simplabs/ember-simple-auth.git#0aaace9b97f60e88386cd5e6dae5fc5c44755a7d",
+    "ember-simple-auth": "git://github.com/simplabs/ember-simple-auth.git#71c3032ceb8413116b53be553819ebdce208ff9e",
     "loader.js": "^4.0.1"
   }
 }

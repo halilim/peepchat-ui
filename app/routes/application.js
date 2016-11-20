@@ -10,5 +10,10 @@ export default Route.extend(ApplicationRouteMixin, {
       this.get('session').invalidate();
       this.get('flashMessages').success('Logged out');
     }
+  },
+  beforeModel() {
+    if(this.get('session').get('isAuthenticated')) {
+      this.transitionTo('app');
+    }
   }
 });

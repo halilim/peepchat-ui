@@ -19,7 +19,7 @@ export default Route.extend({
       }
     }).then((raw) => {
       return raw.json().then((data) => {
-        const currentUser = this.store.push(data);
+        const currentUser = this.store.pushPayload(data);
         this.set('session.currentUser', currentUser);
       });
     });
