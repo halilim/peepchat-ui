@@ -32,6 +32,10 @@ module.exports = function(environment) {
     flashMessageDefaults: {
       timeout: 3000,
       extendedTimeout: 375
+    },
+
+    fastboot: {
+      hostWhitelist: ['chath.herokuapp.com', /^localhost:\d+$/]
     }
   };
 
